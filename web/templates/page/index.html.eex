@@ -1,0 +1,9 @@
+<ol class="topic-list">
+  <%= for topic <- @topics do %>
+    <li class="topic-list__item">
+      <a href="<%= page_path(@conn, :topic, topic.id) %>">
+        <%= topic.title %>
+      </a>
+    </li>
+  <% end %>
+</ol>

@@ -1,0 +1,17 @@
+<h1><%= @topic.title %></h1>
+<ol class="post-list">
+  <%= for post <- @topic.posts do %>
+    <li class="post-list__item">
+      <%= post.body %>
+    </li>
+  <% end %>
+</ol>
+<%= form_for @new_post, page_path(@conn, :reply, @topic.id), fn form -> %>
+  <p>
+    <%= label form, :body, "Reply", class: "form__label form__label--block" %>
+    <%= textarea form, :body %>
+  </p>
+  <p>
+    <%= submit "Reply" %>
+  </p>
+<% end %>

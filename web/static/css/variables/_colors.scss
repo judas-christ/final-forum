@@ -1,0 +1,4 @@
+$color-bkg: #f8f8f8;
+$color-txt: #343434;
+$color-txt--light: mix($color-txt, $color-bkg, 50%);
+$color-border: mix($color-txt, $color-bkg, 20%);

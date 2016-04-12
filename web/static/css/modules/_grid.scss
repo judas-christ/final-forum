@@ -1,0 +1,20 @@
+$grid__num-cols: 12;
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: -20px;
+  margin-right: -20px;
+
+  &__col {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @for $i from 1 through $grid__num-cols {
+    &__col--#{$i} {
+      width: percentage($i / $grid__num-cols);
+    }
+  }
+}
